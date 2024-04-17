@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+body
+{
+    background: linear-gradient(to right,rgb(140, 140, 140),rgb(200, 200, 200));
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.dark{
+    opacity: 0.3; /*permet d'assombrir la page en cliquant sur ajouter au panier*/
+}
+/*===========================================================css barre de navigation=================================================*/
+nav{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color:white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav .logo{
+    padding: 0;
+    margin: 0;
+    width: 20%;
+    top: 0;
+    left: 0;
+}
+nav .onglets{
+    top: 0;
+    right: 0;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+}
+nav .onglets a.link{
+    font-size: 17.5px;
+    margin: 0 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #18191A;
+    transition: .5s;
+}
+nav .onglets a.link:hover{
+    color: rgb(62, 121, 177);
+    transition: .3s;
+}
+nav .onglets form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 30px;
+}
+nav .onglets form input{
+    margin: 0 10px;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #f2f2f2;
+}
+nav .onglets form button{
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: rgb(62, 121, 177);
+    color: white;
+    font-size: 100%;
+}
+/*========================================================css header================================================================*/
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 75px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+/*======================================css de la tables des categories dans le header==============================================*/
+.main .list{
+    display: flex;
+    flex-direction: column;
+    background-color:#f2f2f2;
+    border-radius: 20px;
+    padding: 0 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: medium;
+}
+.main .list .link a{
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #18191A;
+    transition: 0.5s;
+}
+.main .list .link a:hover{
+    color: rgb(62, 121, 177);;
+    transition: 0.2s;
+}
+.main .list .bold{
+    font-weight: bolder;
+    font-size: larger;
+}
+/*===================================================css pour le slider dans le header==================================================*/
+.slider{
+    position:relative;
+    width:840px;
+    height: 472px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.slider img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.slider img.active{
+    opacity: 1;
+}
+.suivant, .precedent{
+    height: 100%;
+    width: 75px;
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0;
+    cursor: pointer;
+}
+.suivant {
+    right: 0;
+}
+.precedent {
+    left: 0;
+}
+.suivant .next{
+    margin: 0;
+    padding: 0;
+    right: 0.5rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.precedent .previous{
+    margin: 0;
+    padding: 0;
+    left: 1rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.suivant:hover, .precedent:hover{
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+/*================================================css pour les icones font awesome================================================*/
+i{
+    margin-right: 8px;
+}
+/*================================================css cartes de produit==============================================================*/
+.r{
+    margin: 20px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.r .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.r .cards .card{
+    margin: 100px;
+    background-color:#caccd1;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 10px;
+    transition: 0.5s;
+}
+.r .cards .card img{
+    width: 320px;
+}
+.r h1{
+    display: block;
+    text-align: center;
+    color:black;
+    text-decoration:solid;
+    margin: 0;
+    padding: 0;
+}
+.r h1:after{
+    display: inline-block;
+    margin: 0 0 8px 20px;
+    height: 3px;
+    content: " ";
+    text-shadow: none;
+    background-color: black;
+    width: 300px;
+}
+.r h1:before {
+    display: inline-block;
+    margin: 0 20px 8px 0;
+    height: 3px;
+    content: " ";
+    text-shadow: none;
+    background-color: black;
+    width: 300px;
+}
+.r .cards .card .acheter, .plus_dmnd .cards .card .acheter{
+    padding: 10px;
+    float: right;
+    border: none;
+    outline: none;
+    background-color:rgb(62, 121, 177);;
+    border-radius: 10px;
+    cursor: pointer;
+}
+span{
+    color: red;
+}
+.plus_dmnd {
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    margin: 20px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+.plus_dmnd h3{
+    display: block;
+    align-items: center;
+    padding: 10px;
+}
+.plus_dmnd .cards {
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.plus_dmnd .cards .card{
+    margin: 25px 50px;
+    background-color:#caccd1;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 10px;
+    transition: 0.5s;
+}
+.cards .card img{
+    width: 200px;
+}
+.cards .card:hover{
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+    transition: 0.5s;
+}
+/*================================================css bouton retour au haut de la page=======================================================*/
+.up{
+    font-size: 2rem;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+}
+/*=====================================================css du footer============================================================*/
+footer{
+    display: grid;
+}
+.footer1{
+    padding: 0;
+    margin: 0;
+    background-color: #18191A ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+}
+.footer1 .logo{
+    padding: 0;
+    margin: 0;
+    width: 20%;
+}
+.footer1 .inscription{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+.footer1 .inscription .prime{
+    font-size: large;
+    color: #f2f2f2;
+}
+.footer1 .inscription .sous{
+    font-size: smaller;
+    color: #888;
+} 
+.footer1 .inscription .opt{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.footer1 .inscription .opt .email{
+    padding: 5px;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background-color: #f2f2f2;
+}
+.footer1 .inscription .opt button{
+    border-radius: 7px;
+    font-weight: bold;
+    font-size:1.2vw;
+    margin: 0 10px;
+    background-color: white;
+    border: 0.2vw solid #343943;
+    color:#343943;
+}
+.footer1 .inscription .opt button:hover{
+    cursor: pointer;
+    background-color: #343943;
+    color:white;
+}
+.footer1 .social{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    margin: 10px;
+}
+.footer1 .social p{
+    color: #f2f2f2;
+    font-size: large;
+}
+.footer1 .social .socialicon{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.footer1 .social{
+    padding-right: 15px;
+    padding-top: 15px;
+}
+.footer2{
+    background-color: #242526;
+    display: grid;
+}
+.footer2 h1, .footer2 h2{
+    color:#f2f2f2;
+}
+.footer2 .items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 100px;
+    padding-top: 0;
+}
+.footer2 .items .principale{
+    font-size: large;
+    color: #f2f2f2;
+}
+.footer2 .items p{
+    font-size: smaller;
+    color: #888;
+}
+.footer2 .contact{
+    display: grid;
+    justify-content: center;
+}
+.footer2 .contact .principale{
+    font-size: larger;
+    color: #f2f2f2;
+}
+.footer2 .contact p{
+    font-size:medium;
+    color:gainsboro;
+}
+/*=================================================================css du formulaire=============================================*/
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: #caccd1;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+.center h1{
+    text-align: center;
+    padding: 20px 0;
+}
+.center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+form .txt_field{
+    position: relative;
+    border-bottom: 2px solid #888787;
+    margin: 30px 0;
+}
+form .txt_field .showHidePw{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-30%);
+    right: 0;
+    color: #888787;
+    font-size: 16px;
+    cursor: pointer;
+}
+.txt_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #888787;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+.txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: rgb(62, 121, 177);
+    transition: .5s;
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+    top: -5px;
+    color: rgb(62, 121, 177);
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+    width: 100%;
+}
+.pass{
+    margin: -5px 0 20px 5px;
+    color: #707070;
+    cursor: pointer;
+}
+.pass:hover{
+    text-decoration: underline;
+}
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: rgb(62, 121, 177);
+    border-radius: 25px;
+    font-size: 18px;
+    color: #caccd1;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+input[type="submit"]:hover{
+    border-color: rgb(62, 121, 177);
+    transition: .5s;
+}
+.signup_link, .login_link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+.signup_link a, .login_link a{
+    color: #2691d9;
+    text-decoration: none;
+}
+.signup_link a:hover{
+    text-decoration: underline;
+}
+  

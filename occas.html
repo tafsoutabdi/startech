@@ -1,0 +1,144 @@
+<html>
+<head> 
+<title>StarTechInformatique - occasion</title> 
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css" href="css/style.CSS">
+<link rel="icon" type="images/png" href="images/icon.jpg" >
+</head> 
+<body class="body">
+    <!--=======================================================Bouton retour au haut de la page====================================-->
+    <div class="up">
+        <i class="fa-solid fa-circle-chevron-up"></i>
+    </div>
+    <!--=======================================================Barre de navigation=================================================-->
+    <nav>
+        <a href="index.html"><img class="logo" src="images/logo.png"></a>
+        <div class="onglets">
+            <form>
+                <input type="search"placeholder="   Tapez ici pour rechercher"size=60 >
+                <button>Rechercher</button>
+            </form>
+            <a href="login.html" class="link"><p><i class="fa-solid fa-circle-user"></i>S'identifier</p></a>
+            <a href="#" class="link"><p><i class="fa-solid fa-cart-shopping"></i>Panier</p></a>
+        </div>
+    </nav>
+    <div class="r">
+        <h1>Les produits en occasion</h1>
+        <p></p>
+        <div class="cards">
+            <div class="card">
+                <img src="images/pcgamer2.png">
+                <h3 class="produits">MSI Raider GE76</h3>
+                <div class="card-body">
+                    <p>i9-12900HK/RTX 3080 Ti</p>
+                </div>
+                <h4>355 000 Da</h4>
+                <div class="ajouter">
+                    <button class="acheter">Ajouter au panier  <i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/tablettesamsungs6.png">
+                <h3 class="produits">SAMSUNG GALAXY TAB S6 LITE</h3>
+                <div class="card-body">
+                    <p>10.4"/Exenos 9611/4GO/64GO</p>
+                </div>
+                <h4>49 000 Da</h4>
+                <div class="ajouter">
+                    <button class="acheter">Ajouter au panier  <i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/telvivo.png">
+                <h3 class="produits">VIVO X80 PRO</h3>
+                <div class="card-body">
+                    <p>6.78"/Snapdragon 8 Gen 1/8GO/256GO</p>
+                </div>
+                <h4>140 000 Da</h4>
+                <div class="ajouter">
+                    <button class="acheter">Ajouter au panier  <i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--========================================================footer================================================================-->
+        <footer>
+            <div class="footer1">
+                <img class="logo" src="images/logo.png">
+                <div class="inscription">
+                    <p class="prime">Premiére fois chez StarTech ?</p>
+                    <p class="sous">Inscrivez vous pour recevoir toutes les nouveautés et nos meilleures offres </p>
+                    <div class="opt">
+                        <input class="email"type="text" placeholder="Adresse e-mail"size=45>
+                        <button>Homme</button>
+                        <button>Femme</button>
+                    </div>
+                </div>
+                <div class="social">
+                    <p>Retrouver nous sur</p>
+                    <div class="socialicon">
+                        <a href="https://www.facebook.com/StarTechInfoPRO/"target="_blank"><img src="images/facebook.png"></a>
+                        <a href="https://www.twitter.com"target="_blank"><img src="images/twitter.png"></a>
+                        <a href="https://www.instagram.com"target="_blank"><img src="images/instagram.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer2">
+                <h1 align="center">StarTech-Informatique</h1>
+                <h2 align="center">Le leader du e-commerce en Algerie</h2>
+                <p></p>
+                <p></p>
+                <p></p>
+                <div class="items">
+                    <div class="serv">
+                        <p class="principale">Nos services :</p>
+                        <p>Vente de produits informatique</p>
+                        <p>Livraison à domicile 58 wilaya</p>
+                        <p>Assistance et maintenance</p>
+                    </div>
+                    <div class="moy">
+                        <p class="principale">Moyens de paiement</p>
+                        <p>Espéce</p>
+                        <p>Chéque</p>
+                        <p>Carte bleu</p>
+                    </div>
+                    <div class="tarif">
+                        <p class="principale">Tarifs de livraison</p>
+                        <p>Tizi-Ouzou : 150 da</p>
+                        <p>Alger : 350 da</p>
+                        <p>Boumerdes : 250 da</p>
+                        <p>Autres wilaya : 600 da</p>
+                    </div>
+                </div>
+                <div class="contact">
+                    <p class="principale">&copy;Pour plus d'information contactez nous sur:</p>
+                    <p>E-mail : startechinformatique@gmail.com</p>
+                    <p>Tel : 026-45-23-37</p>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+        </footer>
+        <script>
+            const up = document.querySelector('.up');
+            up.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: "smooth"
+                })
+            })
+            let acheter = document.querySelectorAll(".acheter");
+            acheter.forEach(achat =>{
+                achat.addEventListener("click", () =>{
+                    document.querySelector('.body').classList.add('dark');
+                    setTimeout(function(){
+                        alert("L'article a éte ajouté au panier avec succes !");
+                        document.querySelector(".body").classList.remove('dark');
+                    }, 0);
+                })    
+            })
+        </script>
+</body>
+</html>

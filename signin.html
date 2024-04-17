@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>StarTechInformatique-Signin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="images/png" href="images/icon.jpg" >
+  </head>
+  <body>
+    <div class="center">
+      <h1>S'enregistrer</h1>
+      <form method="post">
+        <div class="txt_field">
+          <input type="text" required>
+          <span></span>
+          <label>Nom utilisateur</label>
+        </div>
+        <div class="txt_field">
+          <input type="text" required>
+          <span></span>
+          <label>E-mail</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" class="password" required>
+          <span></span>
+          <label>Mot de passe</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" class="password" required>
+          <span></span>
+          <label>Confirmez votre mot de passe</label>
+          <i class="fa-regular fa-eye-slash showHidePw"></i>
+        </div>
+        <input type="submit" value="Enregistrement">
+        <div class="login_link">
+            <p>Vous étes inscrit ? Cliquez <a href="login.html"> ici </a>pour vous connecter</p>
+        </div>
+      </form>
+    </div>
+    <script>
+      const showHidePw = document.querySelector(".showHidePw"); 
+      const input = document.querySelectorAll(".password");
+      showHidePw.addEventListener("click",()=>{
+        input.forEach(element =>{ 
+          if (element.type === "password"){ 
+            element.type = "text";
+            showHidePw.className = "fa-regular fa-eye showHidePw";
+          }else{ 
+            element.type = "password";
+            showHidePw.className = "fa-regular fa-eye-slash showHidePw"; 
+          } 
+        })
+      }) 
+    </script>
+  </body>
+</html>

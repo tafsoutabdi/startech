@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>StarTechInformatique-Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="images/png" href="images/icon.jpg" >
+  </head>
+  <body>
+    <div class="center">
+      <h1>Se connecter</h1>
+      <form method="post">
+        <div class="txt_field">
+          <input type="text" required>
+          <span></span>
+          <label>Nom utilisateur</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" class="password" required>
+          <span></span>
+          <label>Mot de passe</label>
+          <i class="fa-regular fa-eye-slash showHidePw"></i>
+        </div>
+        <div class="pass">Mot de passe oublié ?</div>
+        <input type="submit" value="Connexion">
+        <div class="signup_link">
+            <p>Vous n'êtes pas inscrit ? <a href="signin.html"> Créez </a>un compte maintenant</p>
+        </div>
+      </form>
+    </div>
+    <script>
+      const showHidePw = document.querySelector(".showHidePw"); 
+      const input = document.querySelector(".password");
+      showHidePw.addEventListener("click",()=>{ 
+          if (input.type === "password"){ 
+            input.type = "text";
+            showHidePw.className = "fa-regular fa-eye showHidePw";
+          }else{ 
+            input.type = "password";
+            showHidePw.className = "fa-regular fa-eye-slash showHidePw"; 
+          } 
+        }) 
+    </script>
+  </body>
+</html>

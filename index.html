@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UFT-8"/>
+        <meta name="keywords" content="StarTech, e-commerce"/>
+        <title>StarTech-Informatique</title>
+        <!--=======================================================icon pour l'entete de la page=======================================-->
+        <link rel="icon" type="images/png" href="images/icon.jpg" >
+        <!--=======================================================lien vers la librairie font awsome==================================-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!--=======================================================lien vers la feuille de style css===================================-->
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    </head>
+    <body class="body">
+        <!--=======================================================Bouton retour au haut de la page====================================-->
+    <div class="up">
+        <i class="fa-solid fa-circle-chevron-up"></i>
+    </div>
+    <!--=======================================================Barre de navigation=================================================-->
+        <nav>
+            <img class="logo" src="images/logo.png">
+            <div class="onglets">
+                <form>
+                    <input type="search"placeholder="   Tapez ici pour rechercher"size=60 >
+                    <button>Rechercher</button>
+                </form>
+                <a href="login.html" class="link"><p><i class="fa-solid fa-circle-user"></i>S'identifier</p></a>
+                <a href="#" class="link"><p><i class="fa-solid fa-cart-shopping"></i>Panier</p></a>
+            </div>
+        </nav>
+        <!--=======================================================Header==============================================================-->
+        <header>
+            <div class="main">
+                <!--===============================================Tables des categories==============================================-->
+                <div class="list">
+                    <p class="bold">CATEGORIES : </p>
+                    <div class="link">
+                        <a href="produit.html"><p><i class="fa-solid fa-laptop"></i>Tous le produits</p></a>
+                        <a href="page0.html"><p><i class="fa-solid fa-laptop"></i>Promo Ordinateurs</p></a>
+                        <a href="page1.html"><p><i class="fa-solid fa-mobile-screen"></i>Promo SmartPhone</p></a>
+                        <a href="page2.html"><p><i class="fa-solid fa-tablet-screen-button"></i>Promo Tablette</p></a>
+                        <a href="nvarv.html"><p><i class="fa-solid fa-square-plus"></i>Nouveaux Produits</p></a>
+                        <a href="occas.html"><p><i class="fa-solid fa-recycle"></i>Produits d'occasion</p></a>
+                    </div>
+                </div>
+                <!--==============================================Slider==============================================================-->
+                <div class="slider">
+                    <img src="images/sliderpc.jpg"alt="img1"class="img_slider active">
+                    <img src="images/slidersp.jpg"alt="img2"class="img_slider">
+                    <a id="lien" href="page0.html"><img src="images/slidertablette.jpg"alt="img3"class="img_slider"></a>
+                    <div class="suivant">
+                        <div class="next">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+                        </div>
+                    </div>
+                    <div class="precedent">
+                        <div class="previous">
+                            <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--======================================================Cartes de produits plus demandés==================================================-->
+        <div class="plus_dmnd">
+            <h3>Les produit les plus demandés</h3>
+            <div class="cards">
+                <div class="card">
+                    <img src="images/tablettesamsungs6.png">
+                    <h3 class="produits">SAMSUNG GALAXY TAB S6 LITE</h3>
+                    <div class="card-body">
+                        <p>10.4"/Exenos 9611/4GO/64GO</p>
+                    </div>
+                    <h4>49 000 Da</h4>
+                    <div class="ajouter">
+                        <button class="acheter">Ajouter au panier  <i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/pcgamer2.png">
+                    <h3 class="produits">MSI Raider GE76</h3>
+                    <div class="card-body">
+                        <p>i9-12900HK/RTX 3080 Ti</p>
+                    </div>
+                    <h4>355 000 Da</h4>
+                    <div class="ajouter">
+                        <button class="acheter">Ajouter au panier  <i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/telsamsungs22.png">
+                    <h3 class="produits">SAMSUNG GALAXY S22 PLUS</h3>
+                    <div class="card-body">
+                        <p>6.6"/Exynos 2200/8GO/128GO</p>
+                    </div>
+                    <h4>150 000 Da</h4>
+                    <div class="ajouter">
+                        <button class="acheter">Ajouter au panier  <i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--========================================================footer================================================================-->
+        <footer>
+            <div class="footer1">
+                <img class="logo" src="images/logo.png">
+                <div class="inscription">
+                    <p class="prime">Premiére fois chez StarTech ?</p>
+                    <p class="sous">Inscrivez vous pour recevoir toutes les nouveautés et nos meilleures offres </p>
+                    <div class="opt">
+                        <input class="email"type="text" placeholder="Adresse e-mail"size=45>
+                        <button>Homme</button>
+                        <button>Femme</button>
+                    </div>
+                </div>
+                <div class="social">
+                    <p>Retrouver nous sur</p>
+                    <div class="socialicon">
+                        <a href="https://www.facebook.com/StarTechInfoPRO/"target="_blank"><img src="images/facebook.png"></a>
+                        <a href="https://www.twitter.com"target="_blank"><img src="images/twitter.png"></a>
+                        <a href="https://www.instagram.com"target="_blank"><img src="images/instagram.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer2">
+                <h1 align="center">StarTech-Informatique</h1>
+                <h2 align="center">Le leader du e-commerce en Algerie</h2>
+                <p></p>
+                <p></p>
+                <p></p>
+                <div class="items">
+                    <div class="serv">
+                        <p class="principale">Nos services :</p>
+                        <p>Vente de produits informatique</p>
+                        <p>Livraison à domicile 58 wilaya</p>
+                        <p>Assistance et maintenance</p>
+                    </div>
+                    <div class="moy">
+                        <p class="principale">Moyens de paiement</p>
+                        <p>Espéce</p>
+                        <p>Chéque</p>
+                        <p>Carte bleu</p>
+                    </div>
+                    <div class="tarif">
+                        <p class="principale">Tarifs de livraison</p>
+                        <p>Tizi-Ouzou : 150 da</p>
+                        <p>Alger : 350 da</p>
+                        <p>Boumerdes : 250 da</p>
+                        <p>Autres wilaya : 600 da</p>
+                    </div>
+                </div>
+                <div class="contact">
+                    <p class="principale">&copy;Pour plus d'information contactez nous sur:</p>
+                    <p>E-mail : startechinformatique@gmail.com</p>
+                    <p>Tel : 026-45-23-37</p>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+        </footer>
+        <!--====================================================inclusion du fichier java script==================================-->
+        <script src="script/script.js"></script>
+    </body>
+</html>
